@@ -51,7 +51,7 @@
     transition: transform 400ms, box-shadow 400ms;
 }
 
-.dropdown .menu .link-drop:active {
+.dropdown .:active {
     box-shadow: 2px 3px 1px;
     transform: translate(4px, 6px);
 }
@@ -275,26 +275,27 @@
         justify-content: center;
     }
     
-    @keyframes rodar {
+    @keyframes rodar { /*aqui defini quantos graus meu rodar gira, se o from 
+        for maior que o valor do to, ele vai virar pro outro lado*/
         from{
             transform: rotate(0deg);
         }
         to {
             transform: rotate(360deg);
-        }
+        } 
     }
     
     .conteudo .loading {
         height: 150px;
         width: 150px;
-        margin: 40px;
+        margin: 20px;
         margin-left: 200px;
         border: 20px solid transparent;
         border-top: 20px solid blueviolet;
-        border-radius: 50%;
+        border-radius: 50%; /* defini aqui a borda de 50% para que meu elemento fique circular*/
         animation-name: rodar;
-        animation-duration: 2s;
+        animation-duration: 2s; /* deixei a animacao com 2 segundos*/
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation-timing-function: linear; /* aqui defini que a o movimento da minha animacao sera de velocidade constante*/
     }
 }
