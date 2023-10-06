@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navegador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: silver;
+}
+
+.dropdown {
+    width: 150px;
+    text-align: center;
+}
+.dropdown .botao{
+    background-color: blueviolet;
+    border:none;
+    padding: 5px 15px;
+    cursor: pointer;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+}
+
+.dropdown .botao:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+}
+
+.dropdown .menu {
+    background-color: blueviolet;
+    position: absolute;
+    width: 200px;
+    display: none;
+}
+
+.dropdown:hover .menu{
+    display: block;
+    background-color: blueviolet;
+}
+
+.dropdown .menu .link-drop{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    background-color: silver;
+    border: 2px solid blueviolet;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+}
+
+.dropdown .:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+}
+
+.dropdown .menu .link-drop:hover {
+    background-color: blueviolet;
+}
+
+.navegador .navegador-links {
+    margin: 5px;
+    padding: 20px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegador-links .link {
+    margin-right: 30px;
+    padding: 5px 30px;
+    text-decoration: none;
+    color: black;
+    background-color: blueviolet;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+}
+
+.navegador-links .link:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+}
+
+.navegador-links .link:hover {
+    background-color: silver;
+    border: 2px solid blueviolet;
+}
+
+.container {
+    display: flex;
+    flex-grow: 0;
+}
+
+.nav-left {
+    display: flex;
+    height: 1200px;
+    width: 20vw;
+    background-color: silver;
+    justify-content: center;
+}
+
+.nav-left-links .link-left {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: blueviolet;
+    padding: 5px 60px;
+    margin-top: 30px;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+}
+
+.nav-left-links .link-left:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+}
+
+.nav-left-links .link-left:hover {
+    background-color: silver;
+    border: 2px solid blueviolet;
+}
+
+.conteudo {
+    background-color: rgb(253, 248, 241);
+    width: 80vw;
+    height: 1200px;
+}
+
+.conteudo .texto {
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+}
+
+@keyframes rodar {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.conteudo .loading {
+    height: 150px;
+    width: 150px;
+    margin: 40px;
+    margin-left: 300px;
+    border: 20px solid transparent;
+    border-top: 20px solid blueviolet;
+    border-radius: 50%;
+    animation-name: rodar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@media screen and (max-width: 600px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .navegador {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: silver;
+    }
+    
+    .dropdown {
+        width: 200px;
+        text-align: center;
+    }
+    .dropdown .botao{
+        background-color: blueviolet;
+
+
+        padding: 5px 15px;
+        cursor: pointer;
+    }
+    
+    .dropdown .menu {
+        background-color: blueviolet;
+
+        position: absolute;
+        width: 200px;
+        display: none;
+    }
+    
+    .dropdown:hover .menu{
+        display: block;
+        background-color: blueviolet;
+
+
+    }
+    
+    .dropdown .menu .link-drop{
+        display: block;
+        text-decoration: none;
+        color: silver;
+        padding: 5px;
+        background-color: silver;
+        border: 2px solid blueviolet;
+
+    }
+    
+    .dropdown .menu .link-drop:hover {
+        background-color: blueviolet;
+
+
+    }
+    
+    .navegador .navegador-links {
+        margin: 5px;
+        padding: 20px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navegador-links .link {
+        margin-right: 30px;
+        padding: 5px 30px;
+        text-decoration: none;
+        color: silver;
+        background-color: blueviolet;
+
+
+    }
+    
+    .navegador-links .link:hover {
+        background-color: silver;
+        border: 2px solid blueviolet;
+
+    }
+    
+    .container {
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-left {
+        display: flex;
+        width: 100%;
+        height: 340px;
+        background-color: silver;
+        justify-content: center;
+    }
+    
+    .nav-left-links .link-left {
+        display: block;
+        text-decoration: none;
+        color: silver;
+        background-color: blueviolet;
+
+
+        padding: 5px 60px;
+        margin-top: 30px;
+    }
+    
+    .nav-left-links .link-left:hover {
+        background-color: silver;
+        border: 2px solid blueviolet;
+
+    }
+    
+    .conteudo {
+        width: 100%;
+        height: 1200px;
+    }
+    
+    .conteudo .texto {
+        display: flex;
+        justify-content: center;
+    }
+    
+    @keyframes rodar { /*aqui defini quantos graus meu rodar gira, se o from 
+        for maior que o valor do to, ele vai virar pro outro lado*/
+        from{
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        } 
+    }
+    
+    .conteudo .loading {
+        height: 150px;
+        width: 150px;
+        margin: 40px;
+        margin-left: 200px;
+        border: 20px solid transparent;
+        border-top: 20px solid blueviolet;
+        border-radius: 50%; /* defini aqui a borda de 50% para que meu elemento fique circular*/
+        animation-name: rodar;
+        animation-duration: 2s; /* deixei a animacao com 2 segundos*/
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; /* aqui defini que a o movimento da minha animacao sera de velocidade constante*/
+    }
+}
